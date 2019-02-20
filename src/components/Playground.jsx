@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { Button } from 'reactstrap';
+import { invert } from 'polished';
 
 
 const StyledLink = styled.a`
@@ -9,7 +10,7 @@ const StyledLink = styled.a`
   font-weight: ${pr => (pr.bold ? '700' : '200')};
 
   &:hover {
-    color: ${pr => pr.hoverColor};
+    color: ${invert('#ab0')};
   }
 `;
 
@@ -24,12 +25,12 @@ const ExtraordinaryLink = styled(StyledLink)`
   animation: ${kf} 2s linear infinite;
 
   ::before {
-    content: '🚀';
+    content: '😛';
   }
 `;
 
 const StyledHeader = styled.header`
-  border: 3px solid ${pr => pr.primaryColor};
+  border: 3px solid ${pr => pr.theme.primary};
   border-radius: ${pr => pr.radius}px;
   padding: 10px;
   margin-top: 20px;
@@ -41,19 +42,18 @@ const StyledHeader = styled.header`
 
   @media (max-width: 400px) {
     & {
-      border: 13px solid ${pr => pr.primaryColor};
+      border: 13px solid ${pr => pr.theme.secondary};
     }
   }
 `;
 
-export default function Playground({ primaryColor }) {
+export default function Playground() {
   const [radius, setRadius] = useState(1);
   const makeBiggerRadius = () => setRadius(radius * 2);
   const makeSmallerRadius = () => setRadius(radius / 2);
 
   return (
     <StyledHeader
-      primaryColor={primaryColor}
       radius={radius}
     >
       <nav>
