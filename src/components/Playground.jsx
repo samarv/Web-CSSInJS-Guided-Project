@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 import { invert } from 'polished';
 // import  { theme } from './Container';
+import { Button } from 'reactstrap';
 
 const kf = keyframes`
   to {
@@ -57,6 +58,7 @@ export default function Playground({ primary }) {
         <a href="#">About</a>
         <a className='rotate' href="#">Blog</a>
       </nav>
+      <Button color="danger">Danger!</Button>
 
       <button onClick={increaseRadius}>Increase radius!</button>
       <button onClick={decreaseRadius}>Decrease radius!</button>
