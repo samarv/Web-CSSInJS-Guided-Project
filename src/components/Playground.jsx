@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // tag functions (ES6)
 const StyledHeader = styled.header`
   border: 4px solid ${pr => pr.primary};
+  border-radius: ${props => props.radius}px;
   padding: 10px;
 
   @media (max-width: 400px) {
@@ -36,7 +37,11 @@ export default function Playground({ primary }) {
   const decreaseRadius = () => setRadius(radius / 2);
 
   return (
-    <StyledHeader id='theHeader' primary={primary}>
+    <StyledHeader
+      id='theHeader'
+      primary={primary}
+      radius={radius}
+    >
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
