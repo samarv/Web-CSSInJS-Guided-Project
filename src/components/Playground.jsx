@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 // import { theme } from './Container';
 
+const kf = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 // tag functions (ES6)
 const StyledHeader = styled.header`
@@ -26,6 +31,10 @@ const StyledHeader = styled.header`
       &:hover {
         color: yellow;
       }
+
+      &.rotate {
+        animation: ${kf} 2s infinite linear;
+      }
     }
   }
 `;
@@ -45,7 +54,7 @@ export default function Playground({ primary }) {
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
-        <a href="#">Blog</a>
+        <a className='rotate' href="#">Blog</a>
       </nav>
 
       <button onClick={increaseRadius}>Increase radius!</button>
