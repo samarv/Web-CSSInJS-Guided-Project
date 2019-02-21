@@ -2,6 +2,19 @@ import React from 'react';
 import Playground from './Playground';
 
 
+export const theme = {
+  colors: {
+    primary: 'red',
+  },
+  margins: {
+    sm: '10em',
+    l: '12em',
+  },
+  padding: {
+
+  },
+};
+
 export default class Container extends React.Component {
   state = {
     primary: 'black',
