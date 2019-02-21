@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-// import { theme } from './Container';
+import { invert } from 'polished';
+// import  { theme } from './Container';
 
 const kf = keyframes`
   to {
@@ -29,7 +30,7 @@ const StyledHeader = styled.header`
       margin-right: 10px;
 
       &:hover {
-        color: yellow;
+        color: ${invert('#000')};
       }
 
       &.rotate {
