@@ -1,20 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 // import { theme } from './Container';
 
-const theme = {
-  colors: {
-    primary: 'yellow',
-    secondary: 'red',
-  },
-  margins: {
-    sm: '10em',
-    l: '12em',
-  },
-  padding: {
-
-  },
-};
 
 // tag functions (ES6)
 const StyledHeader = styled.header`
@@ -43,13 +30,21 @@ const StyledHeader = styled.header`
 `;
 
 export default function Playground({ primary }) {
+  const [radius, setRadius] = useState(1);
+
+  const increaseRadius = () => setRadius(radius * 2);
+  const decreaseRadius = () => setRadius(radius / 2);
+
   return (
-    <StyledHeader primary={primary}>
+    <StyledHeader id='theHeader' primary={primary}>
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Blog</a>
       </nav>
+
+      <button onClick={increaseRadius}>Increase radius!</button>
+      <button onClick={decreaseRadius}>Decrease radius!</button>
     </StyledHeader>
   );
 }

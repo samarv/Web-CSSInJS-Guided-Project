@@ -2,9 +2,10 @@ import React from 'react';
 import Playground from './Playground';
 
 
-export const theme = {
+const theme = {
   colors: {
-    primary: 'red',
+    primary: 'yellow',
+    secondary: 'red',
   },
   margins: {
     sm: '10em',
