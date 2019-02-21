@@ -11,7 +11,7 @@ module.exports = {
   },
   devtool: 'source-map', 
   resolve: {
-    extensions: ['.js', '.jsx', '.less']
+    extensions: ['.js', '.jsx', '.less', '.css']
   },
   plugins: [
     // new BundleAnalyzerPlugin()
