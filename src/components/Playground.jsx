@@ -18,12 +18,12 @@ const theme = {
 
 // tag functions (ES6)
 const StyledHeader = styled.header`
-  border: 4px solid ${theme.colors.primary};
+  border: 4px solid ${pr => pr.primary};
   padding: 10px;
 
   @media (max-width: 400px) {
     &{
-      border: 4px solid ${theme.colors.secondary};
+      border: 4px solid ${pr => pr.primary};
     }
   }
 
