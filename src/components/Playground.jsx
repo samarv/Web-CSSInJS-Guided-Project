@@ -16,7 +16,6 @@ const theme = {
   },
 };
 
-
 // tag functions (ES6)
 const StyledHeader = styled.header`
   border: 4px solid ${theme.colors.primary};
@@ -27,6 +26,7 @@ const StyledHeader = styled.header`
       border: 4px solid ${theme.colors.secondary};
     }
   }
+
   nav {
     display: flex;
     justify-content: center;
