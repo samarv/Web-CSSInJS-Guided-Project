@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 // tag functions (ES6)
 const StyledHeader = styled.header`
-  border: 4px solid black;
+  border: 4px solid ${pr => pr.primary};
   padding: 10px;
 `;
 
 export default function Playground({ primary }) {
   return (
-    <StyledHeader>
+    <StyledHeader primary={primary}>
       <nav>
         <a href="#">Home</a>
         <a href="#">About</a>
